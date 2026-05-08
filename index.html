@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samuel Saladino – Currículo</title>
+
+<!-- ── PROTECTION SCRIPT (must run before body renders) ── -->
+<script>
+  // Disable right-click context menu
+  document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+
+  // Block common DevTools keyboard shortcuts
+  document.addEventListener('keydown', function(e) {
+    // F12
+    if (e.key === 'F12') { e.preventDefault(); return false; }
+    // Ctrl+Shift+I / Cmd+Opt+I  (DevTools)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'I') { e.preventDefault(); return false; }
+    // Ctrl+Shift+J / Cmd+Opt+J  (Console)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'J') { e.preventDefault(); return false; }
+    // Ctrl+Shift+C / Cmd+Opt+C  (Inspector)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'C') { e.preventDefault(); return false; }
+    // Ctrl+U / Cmd+U  (View Source)
+    if ((e.ctrlKey || e.metaKey) && e.key === 'u') { e.preventDefault(); return false; }
+    // Ctrl+S / Cmd+S  (Save)
+    if ((e.ctrlKey || e.metaKey) && e.key === 's') { e.preventDefault(); return false; }
+  });
+
+  // Disable text selection via mouse
+  document.addEventListener('selectstart', function(e) { e.preventDefault(); });
+
+  // Disable drag
+  document.addEventListener('dragstart', function(e) { e.preventDefault(); });
+</script>
+
+<style>
+  /* Disable text selection via CSS */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 11pt;
+    color: #222;
+    background: #f0f2f5;
+  }
+
+  .page {
+    display: flex;
+    max-width: 1100px;
+    margin: 30px auto;
+    min-height: 297mm;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.13);
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar {
+    width: 280px;
+    min-width: 280px;
+    background: #1a2535;
+    color: #fff;
+    padding: 36px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+
+  .name-block .first-name {
+    font-size: 20pt;
+    font-weight: 900;
+    line-height: 1.15;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  .name-block .last-name {
+    font-size: 20pt;
+    font-weight: 900;
+    line-height: 1.15;
+    color: #c9a84c;
+    letter-spacing: 1px;
+  }
+  .name-block .title {
+    font-size: 8pt;
+    color: #aaa;
+    margin-top: 9px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    line-height: 1.7;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section-title {
+    font-size: 7.5pt;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: #c9a84c;
+    border-bottom: 1px solid #2e3d55;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  /* Contact */
+  .contact-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+  .contact-list li,
+  .contact-list a {
+    font-size: 9pt;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+    line-height: 1.4;
+  }
+  .contact-list a { color: #7eb3e0; }
+  .contact-list a:hover { text-decoration: underline; }
+
+  /* Skills */
+  .skills-grid { display: flex; flex-wrap: wrap; gap: 6px; }
+  .skill-tag {
+    background: #2e3d55;
+    color: #cce0ff;
+    font-size: 8pt;
+    border-radius: 4px;
+    padding: 4px 8px;
+    line-height: 1.3;
+  }
+
+  /* Education */
+  .edu-item { margin-bottom: 14px; }
+  .edu-item .degree { font-size: 9pt; font-weight: 700; color: #fff; line-height: 1.4; }
+  .edu-item .school { font-size: 8.5pt; color: #7eb3e0; margin-top: 2px; }
+  .edu-item .year   { font-size: 8pt; color: #999; margin-top: 2px; }
+
+  /* Languages */
+  .lang-item { margin-bottom: 12px; }
+  .lang-name  { font-size: 9.5pt; font-weight: 700; color: #fff; }
+  .lang-level { font-size: 8.5pt; color: #aaa; margin-top: 2px; }
+  .lang-bar   { height: 4px; background: #2e3d55; border-radius: 2px; margin-top: 5px; }
+  .lang-fill  { height: 4px; border-radius: 2px; }
+  .fill-pt { width: 100%; background: #c9a84c; }
+  .fill-en { width: 55%;  background: #c9a84c; }
+  .fill-fr { width: 25%;  background: #c9a84c; }
+
+  /* ── MAIN CONTENT ── */
+  .main { flex: 1; padding: 36px 32px; }
+
+  .section-title {
+    font-size: 10pt;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #1a2535;
+    text-transform: uppercase;
+    border-bottom: 2px solid #e4e8ee;
+    padding-bottom: 5px;
+    margin-bottom: 16px;
+    margin-top: 28px;
+  }
+  .section-title:first-child { margin-top: 0; }
+
+  /* Profile */
+  .profile-text {
+    font-size: 10.5pt;
+    line-height: 1.75;
+    color: #333;
+  }
+  .profile-text strong { color: #1a2535; }
+
+  /* Jobs */
+  .job { margin-bottom: 26px; }
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 3px;
+  }
+  .job-title {
+    font-size: 12pt;
+    font-weight: 800;
+    color: #1a2535;
+  }
+  .job-badge {
+    background: #1a2535;
+    color: #fff;
+    font-size: 8pt;
+    font-weight: 600;
+    padding: 3px 11px;
+    border-radius: 14px;
+    white-space: nowrap;
+    margin-left: 12px;
+    flex-shrink: 0;
+  }
+  .job-company {
+    font-size: 9.5pt;
+    color: #2d7dd2;
+    font-weight: 600;
+    margin-bottom: 9px;
+  }
+  .job-company span { color: #888; font-weight: 400; }
+
+  /* Bullets */
+  .bullets { list-style: none; padding: 0; }
+  .bullets li {
+    font-size: 10pt;
+    line-height: 1.65;
+    color: #333;
+    padding-left: 16px;
+    position: relative;
+    margin-bottom: 5px;
+  }
+  .bullets li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #2d7dd2;
+    font-size: 10pt;
+  }
+
+  /* Certifications */
+  .cert-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+  .cert-item {
+    background: #f4f6fa;
+    border: 1px solid #dde2ec;
+    border-radius: 5px;
+    padding: 7px 12px;
+    font-size: 9pt;
+    color: #333;
+    line-height: 1.5;
+  }
+  .cert-item strong { color: #1a2535; display: block; font-size: 9.5pt; }
+
+  @media print {
+    body { background: #fff; }
+    .page { margin: 0; box-shadow: none; border-radius: 0; max-width: 100%; }
+    .job-badge { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    .sidebar   { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    .skill-tag { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    .lang-fill { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ── SIDEBAR ── -->
+  <div class="sidebar">
+    <div class="name-block">
+      <div class="first-name">SAMUEL<br>SALADINO<br>DE OLIVEIRA</div>
+      <div class="last-name">CARVALHO</div>
+      <div class="title">SUPORTE DE TI / OT<br>SEGURANÇA &amp; COMPLIANCE<br>INFRAESTRUTURA</div>
+    </div>
+
+    <div>
+      <div class="sidebar-section-title">CONTATO</div>
+      <ul class="contact-list">
+        <li><a href="https://wa.me/+5521985249813">📞 +55 (21) 98524-9813</a></li>
+        <li>✉ samuelsaladino12@gmail.com</li>
+        <li>📍 Campo Grande, RJ, Brasil</li>
+        <li>🔗 <a href="https://www.linkedin.com/in/samuel-s-57b54417a/">LinkedIn</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="sidebar-section-title">COMPETÊNCIAS</div>
+      <div class="skills-grid">
+        <span class="skill-tag">Suporte TI N1/N2/N3</span>
+        <span class="skill-tag">TI Industrial / OT</span>
+        <span class="skill-tag">ITIL V4</span>
+        <span class="skill-tag">Cibersegurança</span>
+        <span class="skill-tag">LGPD / SC-900</span>
+        <span class="skill-tag">Hardware &amp; Software</span>
+        <span class="skill-tag">Redes de Computadores</span>
+        <span class="skill-tag">Windows (MD-100)</span>
+        <span class="skill-tag">Linux</span>
+        <span class="skill-tag">VMware</span>
+        <span class="skill-tag">Gestão de Ativos</span>
+        <span class="skill-tag">Documentação Técnica</span>
+        <span class="skill-tag">Metodologia 5S</span>
+        <span class="skill-tag">Impressoras &amp; Periféricos</span>
+        <span class="skill-tag">Suporte Multilíngue</span>
+        <span class="skill-tag">Cabeamento Estruturado</span>
+        <span class="skill-tag">Active Directory</span>
+        <span class="skill-tag">Windows Server</span>
+        <span class="skill-tag">JIRA / ServiceNow</span>
+        <span class="skill-tag">PowerShell</span>
+        <span class="skill-tag">Autodesk / License Server</span>
+      </div>
+    </div>
+
+    <div>
+      <div class="sidebar-section-title">FORMAÇÃO</div>
+      <div class="edu-item">
+        <div class="degree">Redes de Computadores (IoT &amp; Cloud)</div>
+        <div class="school">Instituto Infnet</div>
+        <div class="year">2023 – 2026 (Em andamento)</div>
+      </div>
+      <div class="edu-item">
+        <div class="degree">Tecnólogo em Gestão de TI</div>
+        <div class="school">UNIFAEL</div>
+        <div class="year">2019 – 2021</div>
+      </div>
+      <div class="edu-item">
+        <div class="degree">Técnico em Montagem e Manutenção de Computadores</div>
+        <div class="school">SOS Profissional Education</div>
+        <div class="year">2017 – 2018</div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sidebar-section-title">IDIOMAS</div>
+      <div class="lang-item">
+        <div class="lang-name">Português</div>
+        <div class="lang-level">Nativo</div>
+        <div class="lang-bar"><div class="lang-fill fill-pt"></div></div>
+      </div>
+      <div class="lang-item">
+        <div class="lang-name">Inglês</div>
+        <div class="lang-level">Intermediário — B1</div>
+        <div class="lang-bar"><div class="lang-fill fill-en"></div></div>
+      </div>
+      <div class="lang-item">
+        <div class="lang-name">Francês</div>
+        <div class="lang-level">Básico — A2</div>
+        <div class="lang-bar"><div class="lang-fill fill-fr"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MAIN ── -->
+  <div class="main">
+
+    <div class="section-title">PERFIL PROFISSIONAL</div>
+    <p class="profile-text">
+      Profissional de TI com <strong>mais de 8 anos de experiência</strong> em ambientes de TI industrial (OT) e corporativo, incluindo os setores de <strong>defesa e mineração</strong>. Especializado em redução de incidentes, disponibilidade de sistemas e confiabilidade de infraestrutura. Comprovada capacidade de atuar em <strong>ambientes multinacionais e bilíngues</strong>, prestando suporte nos níveis N1/N2/N3, implementando boas práticas do <strong>ITIL v4</strong> e garantindo conformidade com <strong>LGPD e SC-900</strong>. Sólida base técnica em hardware, redes e sistemas, com crescente expertise em <strong>Cloud e IoT</strong>.
+    </p>
+
+    <div class="section-title">EXPERIÊNCIA PROFISSIONAL</div>
+
+    <!-- JOB 1 -->
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title">Técnico de Suporte de TI</div>
+        <div class="job-badge">Jul 2021 – Mar 2026</div>
+      </div>
+      <div class="job-company">Naval Group – Indústria de Defesa <span>· Itaguaí, RJ</span></div>
+      <ul class="bullets">
+        <li>Prestei suporte técnico N1, N2 e N3 em ambiente de defesa de alta segurança (Base Naval de Itaguaí), atendendo usuários finais com exigências críticas de disponibilidade e confidencialidade.</li>
+        <li>Contribuí para a redução de incidentes e aumento da disponibilidade de sistemas corporativos e industriais (OT), fortalecendo a resiliência operacional do ambiente.</li>
+        <li>Desenvolvi e implantei procedimentos de manutenção preventiva, elevando significativamente a confiabilidade da infraestrutura de TI e reduzindo falhas não planejadas.</li>
+        <li>Apoiei missões internacionais e colaborei com equipes globais em ambiente bilíngue (Francês/Inglês), contribuindo para a integração técnica em projetos de alto impacto estratégico.</li>
+        <li>Garanti conformidade com políticas de segurança da informação, normas internacionais e a LGPD, atuando em um dos ambientes mais regulados do setor de defesa nacional.</li>
+        <li>Elaborei documentação técnica, SOPs e manuais de uso para sistemas internos, padronizando processos e facilitando a capacitação das equipes.</li>
+        <li>Acompanhei projetos de infraestrutura, incluindo cabeamento estruturado, organização de rack e passagem de fibra óptica, cumprindo metas e prazos com precisão.</li>
+        <li>Administrei rede standalone e automatizei a instalação de patches de segurança via PowerShell; configurei workstations da engenharia com endereçamento IP estático para conectividade exclusiva e segura.</li>
+        <li>Configurei e mantive switches e roteadores de rede, realizei instalação de conversores de mídia e edge routers para load-balancing e redundância de links de internet, garantindo alta disponibilidade da conectividade em ambiente crítico.</li>
+        <li>Mantive e atualizei o banco de dados de endpoints, assegurando integridade e rastreabilidade dos ativos de TI no ambiente controlado.</li>
+        <li>Instalei e configurei softwares Autodesk e servidores de licença, garantindo disponibilidade contínua das ferramentas para equipes de engenharia e desenho técnico.</li>
+      </ul>
+    </div>
+
+    <!-- JOB 2 -->
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title">Estagiário de TI</div>
+        <div class="job-badge">Set 2019 – Jul 2021</div>
+      </div>
+      <div class="job-company">Naval Group – Indústria de Defesa <span>· Itaguaí, RJ</span></div>
+      <ul class="bullets">
+        <li>Prestei suporte técnico N1 e N2 a colaboradores locais e expatriados em ambiente multilíngue (Português, Francês e Inglês), garantindo atendimento ágil independentemente da barreira linguística.</li>
+        <li>Gerenciei incidentes e requisições via plataforma ITSM internacional, assegurando cumprimento de SLAs e rastreabilidade completa das demandas.</li>
+        <li>Executei manutenção de hardware, formatação, configuração e instalação de sistemas operacionais Windows e Linux em estações de trabalho.</li>
+        <li>Atuei em conformidade com a LGPD no tratamento de dados corporativos, operando dentro do framework ITIL v4 para padronização dos serviços de TI.</li>
+        <li>Elaborei e instalei infraestrutura de cabeamento estruturado (CAT6 e Fibra Óptica), contribuindo para estabilidade e desempenho da rede corporativa.</li>
+        <li>Configurei workstations especializadas para equipes de engenharia e desenho técnico naval, atendendo requisitos de alta demanda gráfica e de processamento.</li>
+      </ul>
+    </div>
+
+    <!-- JOB 3 -->
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title">Jovem Aprendiz — TI &amp; Contratos</div>
+        <div class="job-badge">Jul 2018 – Fev 2019</div>
+      </div>
+      <div class="job-company">Porto Sudeste – Mineração <span>· Itaguaí, RJ</span></div>
+      <ul class="bullets">
+        <li>Implementei a metodologia 5S para organização do parque de ativos de TI, otimizando a gestão de equipamentos no Active Directory com rastreabilidade física completa.</li>
+        <li>Gerenciei estoque de insumos de impressão e CMDB, assegurando disponibilidade contínua de recursos e integridade do inventário de ativos.</li>
+        <li>Assumi a gestão de pagamentos a fornecedores estratégicos (ALGAR, VIVO, FÊNIX e SLA), eliminando encargos por atraso e garantindo adimplência total da carteira.</li>
+        <li>Realizei configuração e manutenção de telefones e rádios das equipes industriais, contribuindo para continuidade operacional e comunicação eficiente no chão de fábrica.</li>
+        <li>Apoiei a gestão de contratos CAPEX e OPEX em parceria com a analista de contratos, mantendo base de dados atualizada e com alta confiabilidade.</li>
+        <li>Conduzi avaliação de fornecedores e apresentação de KPIs em reuniões estratégicas, fornecendo subsídios para tomadas de decisão em processos de contratação.</li>
+      </ul>
+    </div>
+
+    <!-- JOB 4 -->
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title">Técnico em Informática</div>
+        <div class="job-badge">Mar 2019 – Set 2019</div>
+      </div>
+      <div class="job-company">Autônomo <span>· Itaguaí, RJ</span></div>
+      <ul class="bullets">
+        <li>Realizei manutenção de hardware e software em desktops, notebooks e impressoras multifuncionais (HP LaserJet, Epson EcoTank).</li>
+        <li>Executei instalação de SO, formatação, substituição de componentes e manutenção preventiva.</li>
+        <li>Forneci assistência técnica remota e presencial para pequenas e médias empresas na região de Itaguaí.</li>
+        <li>Configurei redes de computadores, servidores e cabeamento estruturado para negócios locais.</li>
+      </ul>
+    </div>
+
+    <!-- CERTIFICATIONS -->
+    <div class="section-title">CERTIFICAÇÕES</div>
+    <div class="cert-grid">
+      <div class="cert-item"><strong>MD-100</strong>31100 – Windows Client</div>
+      <div class="cert-item"><strong>SC-900</strong>Microsoft Security, Compliance and Identity Fundamentals</div>
+      <div class="cert-item"><strong>Cybersecurity Essentials</strong>Cisco Networking Academy</div>
+      <div class="cert-item"><strong>Learn-A-Thon 2020</strong>Desenvolvimento Profissional</div>
+      <div class="cert-item"><strong>Linux Tutorial</strong>Fundamentos de Linux</div>
+      <div class="cert-item"><strong>Cybersecurity Awareness – CAPC</strong>Certiprof</div>
+      <div class="cert-item"><strong>Automação de Sistemas</strong>IFRS – Campus Sertão</div>
+    </div>
+
+  </div><!-- /main -->
+</div><!-- /page -->
+</body>
+</html>
